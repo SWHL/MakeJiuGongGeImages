@@ -1,18 +1,16 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[47]:
-
-
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt
+
 
 def obtain_heart(image_path):
     """
     将给定图像扣为心形
     """
-    heart_im = cv2.imread('./nine_heart/heart.jpg')
+    heart_im = cv2.imread('./assets/heart.jpg')
 
     heart_im = cv2.cvtColor(heart_im, cv2.COLOR_BGR2GRAY)
 
@@ -69,20 +67,10 @@ def split_nine_images(im: np.array):
                 else:
                     tempImg = newImg[i*subHeight: , j*subWidth:, :]
             tempImg = cv2.cvtColor(tempImg, cv2.COLOR_BGR2RGB)
-            cv2.imwrite(f'./nine_heart/images/{i*3+j}.jpg', tempImg)
+            cv2.imwrite(f'./assets/images/{i*3+j}.jpg', tempImg)
 
 
-# In[48]:
-
-
-image_path =  './nine_heart/1.jpg'
+image_path =  './assets/1.jpg'
 result = obtain_heart(image_path)
 split_nine_images(result)
-print('九宫格图已经保存在/nine_heart/images/下，序号顺序为从左到右')
-
-
-# In[ ]:
-
-
-
-
+print('九宫格图已经保存在/assets/images/下，序号顺序为从左到右')
