@@ -1,7 +1,7 @@
-#### [博客链接](https://www.cnblogs.com/shiwanghualuo/p/13562491.html)
+#### [程序员的七夕：Python生成女神的九宫格心形图像](https://www.cnblogs.com/shiwanghualuo/p/13562491.html)
 
 #### 效果图：
-
+![](./assets/effect.png)
 
 #### 所需环境
 
