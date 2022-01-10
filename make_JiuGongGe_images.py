@@ -78,4 +78,4 @@ if __name__ == '__main__':
     result = obtain_heart(bg_path, image_path)
 
     # 分为九宫格
-    split_nine_images(result)
+    split_nine_images(result, image_path)
