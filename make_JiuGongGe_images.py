@@ -64,6 +64,7 @@ def split_nine_images(im, image_path):
 
             save_full_path = save_result_dir / f'{i * 3 + j}.jpg'
             cv2.imwrite(str(save_full_path), temp_img)
+    print(f'九宫格图已经保存在{save_result_dir}，序号顺序为从左到右')
 
 
 if __name__ == '__main__':
@@ -73,7 +74,8 @@ if __name__ == '__main__':
     # 原图
     image_path =  './assets/raw_images/1.jpg'
 
+    # 扣除指定背景图
     result = obtain_heart(bg_path, image_path)
 
+    # 分为九宫格
     split_nine_images(result)
-    print('九宫格图已经保存在/assets/results/下，序号顺序为从左到右')
